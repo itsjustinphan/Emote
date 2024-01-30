@@ -1,0 +1,425 @@
+.font-link {
+  font-family: 'Montserrat';
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.5;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  width: 100%;
+}
+
+header {
+  height: 100vh;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  font-family: 'Montserrat', sans-serif;
+}
+
+h2 {
+  text-align: center;
+  font-size: 3rem;
+  padding-bottom: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
+.article-text > h2 {
+  text-align: center;
+  font-size: 3rem;
+  padding-bottom: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  }
+
+.featured-workouts > h2 {
+  text-align: center;
+  font-size: 3rem;
+  padding-bottom: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
+h3 {
+  padding-top: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* Home page landing section */
+.landing-headings {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+
+.landing-headings > h1 {
+  font-size: 5rem;
+  font-weight: 700;
+}
+
+.landing-headings > p, .about-us__content p:nth-child(3) span:first-child{
+  font-size: 2rem;
+  font-weight: 600;
+  font-style: italic;
+}
+
+/* Home page about us section */
+.about-us {
+  width: 100%;
+  padding: 100px 0px;
+  color: white;
+  background-color: #0f2225;
+}
+
+.about-us__main {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.about-us img {
+  width: 35%;
+}
+
+.about-us__content {
+  width: 550px;
+  font-size: 20px;
+}
+
+.about-us__content p:nth-child(3) span:nth-child(2){
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.about-us__content p:nth-child(3) {
+  text-align: center;
+}
+
+.about-us__content p:nth-child(2) span {
+  font-weight: 600;
+}
+
+/* Featured workouts section */
+.featured-workouts {
+  padding: 90px 0;
+  color: white;
+  background-color: #1d4b52;
+}
+
+.featured-workouts > div > p {
+  font-size: 2rem;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.featured-workouts__img > img {
+  object-fit: cover;
+  display: block;
+  width: 398px;
+  height: 398px;
+}
+
+/* Home page card section */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  justify-content: space-evenly;
+}
+
+.card-container > a, .card-link {
+  color: white;
+}
+
+.cards {
+  border: 1px solid #f2f2f2;
+  border-radius: 3px;
+  width: 100%;
+  max-width: 400px;
+  margin: 30px;
+  border-radius: 1.5rem;
+  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.25);
+  font-family: 'Montserrat', sans-serif;
+}
+
+.card-header{
+  display: flex;
+  margin: 10px auto 10px 10px;
+  align-content: center;
+}
+
+.card-header > img{
+  border-radius: 50%;
+  width: 10%;
+}
+
+.card-header p{
+  margin-left:20px;
+  margin-bottom: 0;
+  font-weight: bold;
+  color: white;
+  font-size: 20px;
+  align-self: center;
+}
+
+.card-content h3 {
+  font-size: 22px;
+  margin-left: 1rem;
+  margin-bottom: 16px;
+  color: white;
+}
+
+.card-content p {
+  font-size: 20px;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  color: white;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+/* Upload Page */
+.upload_main {
+  display: flex;
+  padding: 2rem;
+  background-color: #1d4b52;
+}
+
+.upload-inputs {
+  min-width: 40%;
+}
+
+.upload-labels {
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#preview-image {
+  max-width: 400px;
+  max-height: 400px;
+}
+
+.upload-input-sections {
+  padding-bottom: 2rem;
+}
+
+.dropdown {
+  height: 50px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+}
+
+.submitbutton{
+  width: 100%;
+  height: 50px;
+  font-size: 16Spx;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+textarea.lgtext{
+  width: 100%;
+  height: 400px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+}
+
+textarea.mdtext{
+  width: 100%;
+  height: 100px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+}
+
+textarea.smtext{
+  overflow: hidden;
+  resize: none;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  background-color: #f8f8f8;
+  width: 100%;
+  height: 50px;
+  padding: 12px 20px;
+}
+
+/* Search bar */
+.search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#cover {
+  background-color: white;
+  border-radius: 20px;
+  transform: scale(0.5);
+  border-color: white;
+}
+
+input, button {
+  color: #0f2225;
+  font-family: 'Montserrat', sans-serif;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background-color: transparent;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding-left: 20px;
+  font-size: 2.5rem;
+  color: #bbbbbb;
+}
+
+.button .material-icons {
+  font-size: 80px;
+}
+
+/* Article page */
+.article-body {
+  color: white;
+}
+
+.article-body > img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  padding: 30px;
+}
+
+/* Footer section */
+footer {
+  display: flex;
+}
+
+footer > div > img {
+  width: 100px;
+  height: 100px;
+}
+
+.footer-slogan {
+  display: flex;
+  align-items: center;
+  margin-right: 5rem;
+}
+
+.footer-slogan h2{
+  text-align: left;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.footer-slogan p {
+  font-style: italic;
+}
+
+/* Navbar collapse */
+collapse navbar-collapse {
+  padding: 25px 25px 25px 25px;
+}
+
+/* Extra small devices */
+@media (max-width: 600px){
+  header {
+    background-color: #59767b;
+    background-image: none;
+  }
+
+  .about-us {
+    text-align: center;
+  }
+
+  .about-us img {
+    display: none;
+  }
+
+  .cards {
+    width: 90%;
+    margin: 15px auto 15px auto;
+  }
+
+  .featured-workouts__img > img {
+    width: 100%;
+  }
+
+  footer {
+    display: block;
+  }
+
+  .footer-slogan {
+    justify-content: center;
+    margin: 0;
+  }
+
+  .footer-contact {
+    text-align: center;
+  }
+}
+
+/* Small devices */
+@media (min-width: 600px){
+  header {
+    background-color: #59767b;
+    background-image: none;
+  }
+
+  .about-us {
+    text-align: center;
+  }
+
+  .about-us img {
+    display: none;
+  }
+
+  .footer-slogan {
+    margin-right: 3rem;
+  }
+}
+
+/* Medium devices */
+@media (min-width: 768px) {
+  header{
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../public/img/landing.jpeg');
+  }
+}
+
+/* Large devices */
+@media (min-width: 992px) {
+  .about-us img {
+    display: flex;
+  }
+
+  .about-us {
+    text-align: left;
+  }
+}
