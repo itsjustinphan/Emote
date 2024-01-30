@@ -1,11 +1,10 @@
-import React from 'react'
-import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import About from './components/About';
 import NavBar from './components/NavBar';
 import Home from './components/Home';
 import Resources from './components/Resources';
 import Quiz from './components/Quiz';
-
 
 export function handleScroll() {
   window.scroll({
@@ -15,12 +14,11 @@ export function handleScroll() {
   });
 }
 
-
-export default function App(props) {
+function App(props) {
   return (
     <div>
       <Router>
-      <NavBar aria-label="NavBar"/>
+        <NavBar aria-label="NavBar"/>
         <Routes>
           <Route path="/" element={<Home/>} />
           <Route path="/About" element={<About />} />
@@ -32,6 +30,5 @@ export default function App(props) {
   );
 }
 
-export default App
-
+export default App;
 
