@@ -407,11 +407,11 @@ collapse navbar-collapse {
 }
 
 /* Medium devices */
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   header{
     background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../public/img/landing.jpeg');
   }
-}
+} */
 
 /* Large devices */
 @media (min-width: 992px) {

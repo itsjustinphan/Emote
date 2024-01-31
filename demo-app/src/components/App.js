@@ -1,10 +1,11 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import About from './components/About';
-import NavBar from './components/NavBar';
-import Home from './components/Home';
-import Resources from './components/Resources';
-import Quiz from './components/Quiz';
+
+import About from './About';
+import NavBar from './NavBar';
+import Home from './Home';
+import Resources from './Resources';
+import Quiz from './Quiz';
 
 export function handleScroll() {
   window.scroll({
