@@ -1,5 +1,5 @@
 .font-link {
-  font-family: 'Montserrat';
+  font-family: 'Plus Jakarta Sans';
 }
 
 html {
@@ -12,7 +12,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   line-height: 1.5;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Plus Jakarta Sans';
   font-weight: 400;
   width: 100%;
 }
@@ -22,14 +22,14 @@ header {
   width: 100%;
   background-position: center;
   background-size: cover;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Plus Jakarta Sans';
 }
 
 h2 {
   text-align: center;
   font-size: 3rem;
   padding-bottom: 1rem;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Plus Jakarta Sans';
   font-weight: 600;
 }
 
@@ -37,7 +37,7 @@ h2 {
   text-align: center;
   font-size: 3rem;
   padding-bottom: 1rem;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Plus Jakarta Sans';
   font-weight: 600;
   }
 
@@ -45,7 +45,7 @@ h2 {
   text-align: center;
   font-size: 3rem;
   padding-bottom: 1rem;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Plus Jakarta Sans';
   font-weight: 600;
 }
 
@@ -65,7 +65,7 @@ a {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  color: white;
+  color: black;
 }
 
 .landing-headings > h1 {
@@ -79,62 +79,6 @@ a {
   font-style: italic;
 }
 
-/* Home page about us section */
-.about-us {
-  width: 100%;
-  padding: 100px 0px;
-  color: white;
-  background-color: #0f2225;
-}
-
-.about-us__main {
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.about-us img {
-  width: 35%;
-}
-
-.about-us__content {
-  width: 550px;
-  font-size: 20px;
-}
-
-.about-us__content p:nth-child(3) span:nth-child(2){
-  font-size: 2rem;
-  font-weight: 600;
-}
-
-.about-us__content p:nth-child(3) {
-  text-align: center;
-}
-
-.about-us__content p:nth-child(2) span {
-  font-weight: 600;
-}
-
-/* Featured workouts section */
-.featured-workouts {
-  padding: 90px 0;
-  color: white;
-  background-color: #1d4b52;
-}
-
-.featured-workouts > div > p {
-  font-size: 2rem;
-  margin-bottom: 0;
-  text-align: center;
-}
-
-.featured-workouts__img > img {
-  object-fit: cover;
-  display: block;
-  width: 398px;
-  height: 398px;
-}
-
 /* Home page card section */
 .card-container {
   display: flex;
@@ -144,7 +88,7 @@ a {
 }
 
 .card-container > a, .card-link {
-  color: white;
+  color: black;
 }
 
 .cards {
@@ -155,7 +99,7 @@ a {
   margin: 30px;
   border-radius: 1.5rem;
   box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.25);
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Plus Jakarta Sans';
 }
 
 .card-header{
@@ -196,117 +140,9 @@ a:link {
   text-decoration: none;
 }
 
-/* Upload Page */
-.upload_main {
-  display: flex;
-  padding: 2rem;
-  background-color: #1d4b52;
-}
-
-.upload-inputs {
-  min-width: 40%;
-}
-
-.upload-labels {
-  color: white;
-  font-size: 16px;
-  font-weight: bold;
-}
-
-#preview-image {
-  max-width: 400px;
-  max-height: 400px;
-}
-
-.upload-input-sections {
-  padding-bottom: 2rem;
-}
-
-.dropdown {
-  height: 50px;
-  border: 2px solid #ccc;
-  border-radius: 8px;
-}
-
-.submitbutton{
-  width: 100%;
-  height: 50px;
-  font-size: 16Spx;
-  font-weight: bold;
-  border-radius: 8px;
-}
-
-textarea.lgtext{
-  width: 100%;
-  height: 400px;
-  padding: 12px 20px;
-  box-sizing: border-box;
-  border: 2px solid #ccc;
-  border-radius: 8px;
-  background-color: #f8f8f8;
-  font-size: 16px;
-}
-
-textarea.mdtext{
-  width: 100%;
-  height: 100px;
-  padding: 12px 20px;
-  box-sizing: border-box;
-  border: 2px solid #ccc;
-  border-radius: 8px;
-  background-color: #f8f8f8;
-  font-size: 16px;
-}
-
-textarea.smtext{
-  overflow: hidden;
-  resize: none;
-  border: 2px solid #ccc;
-  border-radius: 8px;
-  background-color: #f8f8f8;
-  width: 100%;
-  height: 50px;
-  padding: 12px 20px;
-}
-
-/* Search bar */
-.search-bar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-family: 'Montserrat', sans-serif;
-}
-
-#cover {
-  background-color: white;
-  border-radius: 20px;
-  transform: scale(0.5);
-  border-color: white;
-}
-
-input, button {
-  color: #0f2225;
-  font-family: 'Montserrat', sans-serif;
-  padding: 0;
-  margin: 0;
-  border: 0;
-  background-color: transparent;
-}
-
-input[type="text"] {
-  width: 100%;
-  padding-left: 20px;
-  font-size: 2.5rem;
-  color: #bbbbbb;
-}
-
-.button .material-icons {
-  font-size: 80px;
-}
-
 /* Article page */
 .article-body {
-  color: white;
+  color: black;
 }
 
 .article-body > img {
@@ -348,10 +184,20 @@ collapse navbar-collapse {
   padding: 25px 25px 25px 25px;
 }
 
+#dropdown-button-dark-example1 {
+  background-color: #F0EEB7;
+  color: black;
+}
+
+.color-nav {
+  background-color: #F0EEB7;
+  font-family: 'Plus Jakarta Sans';
+}
+
 /* Extra small devices */
 @media (max-width: 600px){
   header {
-    background-color: #59767b;
+    background-color: white;
     background-image: none;
   }
 
@@ -389,7 +235,7 @@ collapse navbar-collapse {
 /* Small devices */
 @media (min-width: 600px){
   header {
-    background-color: #59767b;
+    background-color: white;
     background-image: none;
   }
 
