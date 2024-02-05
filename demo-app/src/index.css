@@ -78,6 +78,17 @@ a {
   font-weight: 700;
 }
 
+.landing-headings > h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: red;
+}
+
+.Home-image {
+  width: 400px;
+  height: 400px;
+}
+
 .landing-headings > p, .about-us__content p:nth-child(3) span:first-child{
   font-size: 2rem;
   font-weight: 600;
