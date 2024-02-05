@@ -33,6 +33,11 @@ h2 {
   font-weight: 600;
 }
 
+.about-page > h2 {
+  text-align: left;
+  font-weight: bold;
+}
+
 .article-text > h2 {
   text-align: center;
   font-size: 3rem;
