@@ -1,0 +1,62 @@
+/* CSS for NavBar */
+
+/* Red color for nav bar */
+.nav {
+    background-color: purple;
+}
+  
+/* button and font color for dropdown */
+#dropdown-button {
+    background-color: black;
+    color: white;
+}
+  
+/* allows the text to respond when user hovers over it */
+.active {
+    text-decoration: underline;
+}
+  
+/* handles styling for when the dropdown menu is clicked */
+.dropdown {
+    width: auto;
+}
+  
+.dropdown-name{
+    display: none;
+}
+  
+.dropdown-image{
+    display: none;
+}
+  
+.dropdown-text {
+    float: left;
+    vertical-align: middle;
+}
+  
+/* handles sizing of the dropdown as the page shrinks and expands */
+@media (min-width:480px) {
+  
+  
+}
+  
+@media (min-width:768px) {
+    .dropdown {
+        width: 200px;
+    }
+    
+    .dropdown-name{
+      display:inline;
+    }
+  
+    .dropdown-image {
+      display: inline;
+      width: 3rem;
+    }
+  
+    .dropdown-text {
+      float: right;
+      vertical-align: middle;
+    }
+  
+}
