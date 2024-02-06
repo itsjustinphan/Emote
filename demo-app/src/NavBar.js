@@ -21,7 +21,7 @@ function NavBar() {
             <Dropdown>
               
               <Dropdown.Toggle aria-label="Emotions" className="dropdown" id="dropdown-button">
-                <div className="dropdown-name">Emotions</div>
+                <div className="dropdown-name">Resources for Each Emotion</div>
               </Dropdown.Toggle>
               <Dropdown.Menu className="dropdown">
                 <Dropdown.Item>
