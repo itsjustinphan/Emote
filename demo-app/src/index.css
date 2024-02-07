@@ -156,6 +156,55 @@ a:link {
   text-decoration: none;
 }
 
+/* Begin Resource Card styling */
+
+.resource-card-container {
+  background-color: #f9f5dc;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-left: 20px;
+}
+
+.resource-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.resource-card h3 {
+  margin-top: 0;
+}
+
+.resource-card img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
+}
+
+.resource-card a {
+  margin-top: 10px;
+  text-decoration: none;
+  color: blue;
+}
+
+.resource-card a:hover {
+  text-decoration: underline;
+  color: darkblue;
+}
+
+@media (max-width: 600px) {
+  .resource-card-container {
+    max-width: 100%;
+  }
+}
+
+/* End of Resource Card styling */
+
 /* Article page */
 .article-body {
   color: black;

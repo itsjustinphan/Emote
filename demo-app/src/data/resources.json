@@ -1,0 +1,16 @@
+[
+    {
+        "resource_name": "7 Best Hikes Near Seattle",
+        "description": "Plan your next nature adventure with these great hikes near Seattle!",
+        "emotion": "Happy",
+        "img": "./img/best-hikes.jpg",
+        "website_link": "https://www.reneeroaming.com/best-hikes-near-seattle-washington/"
+    },
+
+    {"resource_name": "Pike Place Market",
+    "description": "Visit the biggest tourist attraction in Seattle! Pike Place is known for its vibrant atmosphere, diverse fresh produce, crafts, unique shops, providing a rich cultural and culinary experience for both visitors and locals.",
+    "emotion": "Happy",
+    "img": "./img/pike-place.jpg",
+    "website_link": "https://www.pikeplacemarket.org/"
+    }
+]
