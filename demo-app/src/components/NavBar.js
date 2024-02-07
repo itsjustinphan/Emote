@@ -1,6 +1,11 @@
+import anger from './img/anger.png';
+import stress from './img/stress.png';
+import fear from './img/fear.png';
+import happy from './img/happy.png';
+import sadness from './img/sadness.js';
+import './NavBar.css';
 import React from "react";
 import { Link } from "react-router-dom";
-
 import "bootstrap/dist/css/bootstrap.min.css";
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
@@ -27,39 +32,39 @@ export default function NavBar() {
 
               <Dropdown>
               
-              <Dropdown.Toggle aria-label="Resources" className="color-nav" id="dropdown-button-dark-example1" variant="secondary">
-                <div className="dropdown-name-full">Resources</div> 
+              <Dropdown.Toggle aria-label="Emotions" className="dropdown" id="dropdown-button">
+                <div className="dropdown-name">Resources for Each Emotion</div>
               </Dropdown.Toggle>
-              <Dropdown.Menu className="color-nav" id="dropdown-button-dark-example1">
+              <Dropdown.Menu className="dropdown">
                 <Dropdown.Item>
-                  {/* <NavLink to="/group4-in4matix/type-1" className="nav-link" id="nav-li" activeClassName={"activeLink"}>Perfectionist</NavLink> */}
-                  <Nav.Link as={Link} aria-label="Happy" to="/Happy" className="nav-link" id="nav-li" activeClassName={"activeLink"}>
-                    <p className="dropdown-text">Happy</p>
-                  </Nav.Link>
-                </Dropdown.Item>
-                <Dropdown.Item>
-                  {/* <NavLink to="/group4-in4matix/type-2" className="nav-link" id="nav-li" activeClassName={"activeLink"}>Superhero</NavLink> */}
-                  <Nav.Link as={Link} aria-label="Sad" to="/Sad" className="nav-link" id="nav-li" activeClassName={"activeLink"}>
-                    <p className="dropdown-text">Sad</p>
-                  </Nav.Link>
-                </Dropdown.Item>
-                <Dropdown.Item>
-                  {/* <NavLink to="/group4-in4matix/type-3" className="nav-link" id="nav-li" activeClassName={"activeLink"}>Genius</NavLink> */}
-                  <Nav.Link as={Link} aria-label="Anger" to="/Anger" className="nav-link" id="nav-li" activeClassName={"activeLink"}>
+                  <NavLink aria-label="Anger" to="/Anger" className="nav-link" id="nav-li" activeClassName={"activeLink"}>
+                    <img className="dropdown-image" src={anger} alt="anger" />
                     <p className="dropdown-text">Anger</p>
-                  </Nav.Link>
+                  </NavLink>
                 </Dropdown.Item>
                 <Dropdown.Item>
-                  {/* <NavLink to="/group4-in4matix/type-4" className="nav-link" id="nav-li" activeClassName={"activeLink"}>Soloist</NavLink> */}
-                  <Nav.Link as={Link} aria-label="Stress" to="/Stress" className="nav-link" id="nav-li" activeClassName={"activeLink"}>
+                  <NavLink aria-label="Stress" to="/Stress" className="nav-link" id="nav-li" activeClassName={"activeLink"}>
+                    <img className="dropdown-image" src={stress} alt="stress" />
                     <p className="dropdown-text">Stress</p>
-                  </Nav.Link>
+                  </NavLink>
                 </Dropdown.Item>
                 <Dropdown.Item>
-                  {/* <NavLink to="/group4-in4matix/type-5" className="nav-link" id="nav-li" activeClassName={"activeLink"}>Expert</NavLink> */}
-                  <Nav.Link as={Link} aria-label="Fear" to="/Fear" className="nav-link" id="nav-li" activeClassName={"activeLink"}>
+                  <NavLink aria-label="Fear" to="/Fear" className="nav-link" id="nav-li" activeClassName={"activeLink"}>
+                    <img className="dropdown-image" src={fear} alt="fear" />
                     <p className="dropdown-text">Fear</p>
-                  </Nav.Link>
+                  </NavLink>
+                </Dropdown.Item>
+                <Dropdown.Item>
+                  <NavLink aria-label="Happy" to="/Happy" className="nav-link" id="nav-li" activeClassName={"activeLink"}>
+                    <img className="dropdown-image" src={happy} alt="happy" />
+                    <p className="dropdown-text">Happy</p>
+                  </NavLink>
+                </Dropdown.Item>
+                <Dropdown.Item>
+                  <NavLink aria-label="Sadness" to="/Sad" className="nav-link" id="nav-li" activeClassName={"activeLink"}>
+                    <img className="dropdown-image" src={sadness} alt="sadness" />
+                    <p className="dropdown-text">Sad</p>
+                  </NavLink>
                 </Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
