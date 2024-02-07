@@ -1,11 +1,11 @@
-import anger from './img/anger.png';
-import stress from './img/stress.png';
-import fear from './img/fear.png';
-import happy from './img/happy.png';
-import sadness from './img/sadness.js';
+import anger from '../img/anger.png';
+import stress from '../img/stress.png';
+import fear from '../img/fear.png';
+import happy from '../img/happy.png';
+import sadness from '../img/sadness.png';
 import './NavBar.css';
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
