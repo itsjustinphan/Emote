@@ -9,6 +9,7 @@
 #dropdown-button {
     background-color: black;
     color: white;
+    width: fit-content;
 }
   
 /* allows the text to respond when user hovers over it */
@@ -27,6 +28,8 @@
   
 .dropdown-image{
     display: none;
+    width:  70px;
+    height: 70px;
 }
   
 .dropdown-text {

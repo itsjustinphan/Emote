@@ -15,11 +15,8 @@ export default function Home() {
            <h2>Take a quiz and see how you are currently feeling.</h2>
            <h3>DISCLAIMER: This quiz is NOT a diagnosis!</h3>
            <img src='/img/inside-out.jpeg' className="Home-image" alt="insideOut-logo"></img> 
-    
-       </div>
+          </div>
        </header>
-
-
    </div>
  )
 }

@@ -18,10 +18,8 @@ export default function Happy() {
 
   return (
     <div>
-      <header>
-        <div className="landing-headings">
-          <h1>Happy</h1>
-        </div>
+      <header className="resource-header">
+          <h1>Happy Resources</h1>
       </header>
 
       <div className="resource-container">

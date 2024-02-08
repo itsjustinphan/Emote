@@ -4,13 +4,14 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import About from './About';
 import NavBar from './NavBar';
 import Home from './Home';
-import Resources from './Resources';
+// import Resources from './Resources';
 import Quiz from './Quiz';
 import Happy from './Happy';
 import Sad from './Sad';
 import Anger from './Anger';
 import Fear from './Fear';
 import Stress from './Stress';
+import Footer from './Footer';
 
 export function handleScroll() {
   window.scroll({
@@ -22,17 +23,6 @@ export function handleScroll() {
 
 function App(props) {
   return (
-    // <div>
-    //   <Router>
-    //     <NavBar aria-label="NavBar"/>
-    //     <Routes>
-    //       <Route path="/" element={<Home/>} />
-    //       <Route path="/About" element={<About />} />
-    //       <Route path="/Quiz" element={<Quiz />} />
-    //       <Route path="/Resources" element={<Resources />} />
-    //     </Routes>
-    //   </Router> 
-    // </div>
     <div>
       <Router>
         <NavBar />
@@ -41,13 +31,14 @@ function App(props) {
           <Route path="/" element={<Home/>} />
           <Route path="/About" element={<About />} />
           <Route path="/Quiz" element={<Quiz />} />
-          <Route path="/Resources" element={<Resources />} />
+          {/* <Route path="/Resources" element={<Resources />} /> */}
           <Route path="/Happy" element={<Happy />} />
           <Route path="/Sad" element={<Sad />} />
           <Route path="/Anger" element={<Anger />} />
           <Route path="/Stress" element={<Stress />} />
           <Route path="/Fear" element={<Fear />} />
         </Routes>
+        <Footer/> 
     </Router>
   </div>
 
