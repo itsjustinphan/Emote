@@ -155,16 +155,16 @@ a:link {
 /* Begin Resource Card styling */
 
 .resource-card-container {
+  display: flex;
   background-color: #f9f5dc;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   max-width: 400px;
   margin-bottom: 20px;
-  display: grid;
-  flex-wrap: wrap;
   justify-content: space-evenly;
-  margin-left: 20px;
+  margin: 20px auto;
+  border: 4px solid #f2e596;
 }
 
 .resource-card {
@@ -216,10 +216,14 @@ a:link {
 }
 
 /* Footer section */
+
 footer {
   display: flex; 
   background-color: #F0EEB7;
+  position: fixed; 
+  left: 0;
   bottom: 0;
+  width: 100%; 
 }
 
 footer > div > img {
@@ -233,7 +237,7 @@ footer > div > img {
   margin-right: 5rem;
 }
 
-.footer-slogan h2{
+.footer-slogan h2 {
   text-align: left;
   margin-bottom: 0;
   padding-bottom: 0;
