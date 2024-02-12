@@ -29,7 +29,133 @@
         "emotion": "Happy",
         "img": "./img/recreation.png",
         "website_link": "https://wellbeing.uw.edu/topic/recreation/"
+    },
+
+    {
+        "resource_name": "Anger Management Workbook",
+        "description": "Anger management workbook to write out all of your feelings with guided prompts.",
+        "emotion": "Anger",
+        "img": "./img/anger-workbook.jpg",
+        "website_link": "https://store.samhsa.gov/sites/default/files/anger_management_workbook_508_compliant.pdf"
+    },
+
+    {
+        "resource_name": "UW IMA",
+        "description": "UW IMA offers an array of recreational and sports programs at the University of Washington, encouraging student participation in sports and fitness activities to promote a healthy lifestyle.",
+        "emotion": "Anger",
+        "img": "./img/uw-ima.jpg",
+        "website_link": "https://www.washington.edu/ima/"
+    },
+
+    {
+        "resource_name": "Rage Industry",
+        "description": " Rage room ",
+        "emotion": "Anger",
+        "img": "./img/rage-room.jpg",
+        "website_link": "https://www.rageindustry.com/"
+    },
+
+    {
+        "resource_name": "10-Minute Meditation",
+        "description": "Youtube video with a 10-minute meditation if you are feeling angry.",
+        "emotion": "Anger",
+        "img": "./img/10-meditation.png",
+        "website_link": "https://www.youtube.com/watch?v=wkse4PPxkk4"
+    },
+    
+    {
+        "resource_name": "How to manage anxiety and fear",
+        "description": "Resource for managing feelings of anxiety and fear.",
+        "emotion": "Fear",
+        "img": "./img/manage-anxiety-fear.png",
+        "website_link": "https://www.mentalhealth.org.uk/explore-mental-health/publications/how-overcome-anxiety-and-fear"
+    },
+
+    {
+        "resource_name": "Stoic",
+        "description": "Journaling, breathing exercises, guided meditations",
+        "emotion": "Fear",
+        "img": "./img/stoic.png",
+        "website_link": "https://www.getstoic.com/"
+    },
+
+    {
+        "resource_name": "Botanic Gardens",
+        "description": "Spending time in green spaces can alleviate anxiety and offer time for reflection and solitude. When feeling overwhelmed by responsibilities, it can be helpful to be in this environment which facilitates mindfulness practices.",
+        "emotion": "Fear",
+        "img": "./img/botanic.png",
+        "website_link": "https://botanicgardens.uw.edu/"
+    },
+
+    {
+        "resource_name": "Breathe+",
+        "description": "Simple way to visualize and get in control of your breathing.",
+        "emotion": "Fear",
+        "img": "./img/breathe.jpg",
+        "website_link": "https://apps.apple.com/us/app/breathe-breath-timer-trainer/id1106998959"
+    },
+
+    {
+        "resource_name": "Rosebud",
+        "description": "Collect your thoughts and manage your emotions with this AI-centered online journal!",
+        "emotion": "Sad",
+        "img": "./img/rosebud.png",
+        "website_link": "https://my.rosebud.app/home"
+    },
+
+    {
+        "resource_name": "Husky HelpLine",
+        "description": "Husky HelpLine is available to support you with same-day access to a Licensed Mental Health Counselor. This service is open 24/7 and there are several ways to connect.",
+        "emotion": "Sad",
+        "img": "./img/husky-help.jpg",
+        "website_link": "https://wellbeing.uw.edu/huskyhelpline/#:~:text=Husky%20HelpLine%20is%20supported%20through,%2D416%2D380%2D6578)"
+    },
+    
+    {
+        "resource_name": "Discovery Park",
+        "description": "Take a walk around Discovery Park to get your mind off of things.",
+        "emotion": "Sad",
+        "img": "./img/discovery-park.jpg",
+        "website_link": "https://www.seattle.gov/parks/allparks/discovery-park"
+    },
+
+    {
+        "resource_name": "How to Be Sad Podcast",
+        "description": "This is a podcast with Helen Russell who is a happiness researcher.",
+        "emotion": "Sad",
+        "img": "./img/sad-pod.png",
+        "website_link": "https://podcasts.apple.com/us/podcast/how-to-be-sad-with-helen-russell/id1550928939"
+    },
+
+    {
+        "resource_name": "UW CATS (Center for Anxiety and Trauma Stress)",
+        "description": "UW center that conducts research to better understand treatment of stress and anxiety and provide a state-of-the-art clinical care for those suffering from these emotions",
+        "emotion": "Stress",
+        "img": "./img/uw-cats.jpg",
+        "website_link": "https://www.washington.edu/research/research-centers/center-for-anxiety-and-trauma-stress-uwcats/"
+    },
+
+    {
+        "resource_name": "Reading with Rover",
+        "description": "Reading with Rover is an organization that focuses on mental health with therapy dogs.",
+        "emotion": "Stress",
+        "img": "./img/rover.png",
+        "website_link": "https://www.readingwithrover.org/"
+    },
+
+    {
+        "resource_name": "Rage Industry",
+        "description": "Rage room",
+        "emotion": "Stress",
+        "img": "./img/rage-room.jpg",
+        "website_link": "https://www.rageindustry.com/"
+    },
+
+    {
+        "resource_name": "Encore Karaoke",
+        "description": "Karaoke with your friends to relieve your stress.",
+        "emotion": "Stress",
+        "img": "./img/encore.jpg",
+        "website_link": "https://client.minitable.net/c_reservation?sid=sfd38aaeaba240f206f766623d5c40168"
     }
-
-
 ]
