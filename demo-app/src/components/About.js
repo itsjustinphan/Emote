@@ -5,7 +5,7 @@ import Button from 'react-bootstrap/Button';
 //Renders the landing page for users
 export default function About() {
   return (
-    <div>
+    <div className="full-height">
       <header>
         <div className="about-page">
             <h2>Mission Statement</h2>

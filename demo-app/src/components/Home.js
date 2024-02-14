@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 //Renders the landing page for users
 export default function Home() {
  return (
-   <div>
+   <div className="full-height">
        <header>
            <div className="landing-headings">
            <h1>Emote.</h1>
