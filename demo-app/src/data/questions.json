@@ -10,13 +10,43 @@
     ]
   },
   {
-    "emotion": "Sad",
-    "question": "Have you encountered any recent situations that have left you feeling a sense of loss or emptiness?",
+    "emotion": "Happy",
+    "question": "How often do you reflect on what you’re grateful for?",
     "options": [
-      "No, everything has been fine.",
-      "I'm not sure.",
-      "Yes, there has been a situation that kind of/slightly affected me.",
-      "Absolutely, I'm feeling quite down about something."
+      "Often, I always try to practice gratitude.",
+      "Sometimes, occasionally I will practice gratitude.",
+      "Rarely, I do not typically practice gratitude.",
+      "Never, I do not practice gratitude at all." 
+    ]
+  },
+  {
+    "emotion": "Anger",
+    "question": "Have you recently experienced a situation that has upset you or made you angry?",
+    "options": [
+      "Definitely, I’m quite upset about something.",
+      "Yes there has been a situation that bothered me.",
+      "I’m not sure.",
+      "No, everything has been fine."
+    ]
+  },
+  {
+    "emotion": "Fear",
+    "question": "When you think about next week, how do you feel?",
+    "options": [
+      "Uncertain about what’s to come.",
+      "Optimistic.",
+      "Scared to think ahead.",
+      "Resentful as it might not turn out well."
+    ]
+  },
+  {
+    "emotion": "Stress",
+    "question": "Were you not able to fall and stay asleep this past week?",
+    "options": [
+      "Yes, everyday this week.",
+      "Yes, a few nights this week.",
+      "No, I found it easier this whole week.",
+      "No, I was able to sleep most nights."
     ]
   }
 ]
