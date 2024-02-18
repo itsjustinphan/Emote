@@ -1,0 +1,22 @@
+[
+  {
+    "emotion": "Sad",
+    "question": "Reflecting on your recent experiences, have you encountered any events or situations that have left you feeling overwhelmed with sadness?",
+    "options": [
+      "No, everything has been fine.",
+      "I'm not sure.",
+      "Yes, there has been a situation that kind of/slightly affected me.",
+      "Absolutely, I'm feeling quite down about something."
+    ]
+  },
+  {
+    "emotion": "Sad",
+    "question": "Have you encountered any recent situations that have left you feeling a sense of loss or emptiness?",
+    "options": [
+      "No, everything has been fine.",
+      "I'm not sure.",
+      "Yes, there has been a situation that kind of/slightly affected me.",
+      "Absolutely, I'm feeling quite down about something."
+    ]
+  }
+]
