@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Button from 'react-bootstrap/Button';
 import questionsData from "../data/questions.json";
+import Plotly from 'plotly.js-dist';
 
 const answerValues = {
   "Sad": [4, 3, 2, 1],
@@ -8,6 +9,47 @@ const answerValues = {
   "Anger": [4, 3, 2, 1],
   "Fear": [4, 3, 2, 1],
   "Stress": [4, 3, 2, 1]
+};
+
+const BubbleChart = ({ quizResults }) => {
+  useEffect(() => {
+    if (quizResults) {
+      const data = Object.keys(quizResults).map(emotion => ({
+        x: [emotion], // x-axis: Emotion
+        y: [quizResults[emotion]], // y-axis: Score
+        mode: 'markers',
+        marker: {
+          size: Math.sqrt(quizResults[emotion]) * 10, // Bubble size based on score
+        },
+        text: [emotion],
+      }));
+
+      const layout = {
+        title: 'Quiz Results Bubble Chart',
+        showlegend: false, // Hide legend
+        xaxis: {
+          showgrid: false, // Hide x-axis gridlines
+          zeroline: false, // Hide x-axis zeroline
+          showline: false, // Hide x-axis line
+          tickfont: {
+            size: 0, // Hide x-axis tick labels
+          },
+        },
+        yaxis: {
+          showgrid: false, // Hide y-axis gridlines
+          zeroline: false, // Hide y-axis zeroline
+          showline: false, // Hide y-axis line
+          tickfont: {
+            size: 0, // Hide y-axis tick labels
+          },
+        },
+      };
+
+      Plotly.newPlot('bubble-chart', data, layout);
+    }
+  }, [quizResults]);
+
+  return <div id="bubble-chart" />;
 };
 
 export default function Quiz() {
