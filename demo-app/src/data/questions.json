@@ -1,3 +1,4 @@
+
 [
   {
     "emotion": "Sad",
@@ -20,13 +21,33 @@
     ]
   },
   {
-    "emotion": "Happy",
-    "question": "How often do you reflect on what you’re grateful for?",
+    "emotion": "Sad",
+    "question": "Reflecting on your recent experiences, have you encountered any events or situations that have left you feeling overwhelmed with sadness?",
     "options": [
-      "Often, I always try to practice gratitude.",
-      "Sometimes, occasionally I will practice gratitude.",
-      "Rarely, I do not typically practice gratitude.",
-      "Never, I do not practice gratitude at all." 
+      "Absolutely, I'm feeling quite down about something.",
+      "Yes, there has been a situation that kind of/slightly affected me.",
+      "I'm not sure",
+      "No, everything has been fine."
+    ]
+  },
+  {
+    "emotion": "Sad",
+    "question": "Have you encountered any recent situations that have left you feeling a sense of loss or emptiness?",
+    "options": [
+      "Absolutely, I'm feeling quite down about something",
+      "Yes, there has been a situation that kind of/slightly affected me.",
+      "I'm not sure",
+      "No, everything has been fine."
+    ]
+  },
+  {
+    "emotion": "Sad",
+    "question": "Is there anything taking up your headspace at the moment?",
+    "options": [
+      "Yes, it has taken up alot of my headspace.",
+      "Yes, I have been thinking about it here and there.",
+      "I'm not sure",
+      "No."
     ]
   },
   {
@@ -36,7 +57,27 @@
       "Often, I always try to practice gratitude.",
       "Sometimes, occasionally I will practice gratitude.",
       "Rarely, I do not typically practice gratitude.",
-      "Never, I do not practice gratitude at all." 
+      "Never, I do not practice gratitude at all."
+    ]
+  },
+  {
+    "emotion": "Happy",
+    "question": "Over the last week, how frequently have you found yourself smiling or laughing genuinely?",
+    "options": [
+      "Everyday.",
+      "Few times a week.",
+      "Once a week.",
+      "Never."
+    ]
+  },
+  {
+    "emotion": "Happy",
+    "question": "Do you often take time to appreciate the little things that make you happy each day?",
+    "options": [
+      "Yes, everyday.",
+      "Sometimes.",
+      "Rarely.",
+      "Never."
     ]
   },
   {
@@ -51,12 +92,22 @@
   },
   {
     "emotion": "Anger",
-    "question": "Have you recently experienced a situation that has upset you or made you angry?",
+    "question": "Over the past week, how often have you found yourself feeling irritated or angered?",
     "options": [
-      "Definitely, I’m quite upset about something.",
-      "Yes there has been a situation that bothered me.",
-      "I’m not sure.",
-      "No, everything has been fine."
+      "Almost constantly, It’s been a tough week emotionally",
+      "Frequently, but it’s manageable",
+      "Occasionally.",
+      "Rarely or never."
+    ]
+  },
+  {
+    "emotion": "Anger",
+    "question": "How would you describe the overall tone of your recent interactions with others?",
+    "options": [
+      "Positive and harmonious.",
+      "Neutral, neither positive nor negative.",
+      "A bit tense or strained.",
+      "Definitely negative or confrontational."
     ]
   },
   {
@@ -71,12 +122,22 @@
   },
   {
     "emotion": "Fear",
-    "question": "When you think about next week, how do you feel?",
+    "question": "How often do you worry about your future?",
     "options": [
-      "Resentful as it might not turn out well.",
-      "Scared to think ahead.",
-      "Uncertain about what’s to come.",
-      "Optimistic."
+      "Yes, everyday this week.",
+      "Yes, a couple of times this week",
+      "Yes, once or twice this week.",
+      "No."
+    ]
+  },
+  {
+    "emotion": "Fear",
+    "question": "Do you feel safe in your environment?",
+    "options": [
+      "Never, I do not feel safe and am constantly worried about my safety.",
+      "Rarely, I feel uneasy in my surroundings. ",
+      "Sometimes, there are a couple places where I don’t feel secure.",
+      "Usually, I feel safe in most places."
     ]
   },
   {
@@ -91,12 +152,22 @@
   },
   {
     "emotion": "Stress",
-    "question": "Were you not able to fall and stay asleep this past week?",
+    "question": "Did you feel overwhelmed this week? If so, how many times?",
     "options": [
       "Yes, everyday this week.",
-      "Yes, a few nights this week.",
-      "No, I found it easier this whole week.",
-      "No, I was able to sleep most nights."
+      "Yes, a couple of times this week.",
+      "Yes, a once or twice this week.",
+      "No, I was not overwhelmed this week."
+    ]
+  },
+  {
+    "emotion": "Stress",
+    "question": "Have you been in control of your behavior/thoughts/emotions this week?",
+    "options": [
+      "Not really",
+      "Kind of, I try to",
+      "Yes, for the most part.",
+      "Yes, definitely"
     ]
   }
 ]
