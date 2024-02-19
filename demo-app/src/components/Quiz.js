@@ -104,6 +104,7 @@ export default function Quiz() {
         <div>
           <h2>Quiz Results</h2>
           <pre>{JSON.stringify(quizResults, null, 2)}</pre>
+          <BubbleChart quizResults={quizResults} />
         </div>
       ) : (
         <div>
