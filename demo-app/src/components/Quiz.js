@@ -25,7 +25,7 @@ const BubbleChart = ({ quizResults }) => {
       }));
 
       const layout = {
-        title: 'Quiz Results Bubble Chart',
+        title: '',
         showlegend: false, // Hide legend
         xaxis: {
           showgrid: false, // Hide x-axis gridlines
@@ -67,8 +67,16 @@ export default function Quiz() {
   };
 
   const handleNext = () => {
-    if (currentQuestion < questions.length - 1) {
-      setCurrentQuestion(currentQuestion + 1);
+    const currentResponse = responses[currentQuestion];
+    const nextQuestion = currentQuestion + 1;
+  
+    if (currentQuestion < questions.length - 1 && currentResponse !== null) {
+      setResponses(prevResponses => {
+        const updatedResponses = [...prevResponses];
+        updatedResponses[nextQuestion] = null; // Reset response for next question
+        return updatedResponses;
+      });
+      setCurrentQuestion(nextQuestion);
     } else {
       displayQuizResults();
     }
@@ -95,15 +103,11 @@ export default function Quiz() {
   return (
     <div className="full-height">
       <header>
-        <div className="landing-headings">
-          <h1>QUIZ</h1>
-        </div>
+        <h1>{quizResults ? "Quiz Results" : "Quiz"}</h1>
       </header>
 
       {quizResults ? (
         <div>
-          <h2>Quiz Results</h2>
-          <pre>{JSON.stringify(quizResults, null, 2)}</pre>
           <BubbleChart quizResults={quizResults} />
         </div>
       ) : (
@@ -112,7 +116,7 @@ export default function Quiz() {
           <form>
             {questions[currentQuestion].options.map((option, index) => (
               <div key={index}>
-                <input type="radio" id={`option_${index}`} name={`question_${currentQuestion}`} value={index} onChange={() => handleResponseChange(index)} />
+                <input type="radio" id={`option_${index}`} name={`question_${currentQuestion}`} value={index} defaultChecked={false} onChange={() => handleResponseChange(index)} />
                 <label htmlFor={`option_${index}`}>{option}</label>
               </div>
             ))}
@@ -122,6 +126,7 @@ export default function Quiz() {
           </Button>
         </div>
       )}
+      <h4>DISCLAIMER: This quiz is NOT a diagnosis!</h4>
     </div>
   );
 }
