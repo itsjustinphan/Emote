@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Button from 'react-bootstrap/Button';
 import questionsData from "../data/questions.json";
-import Plotly from 'plotly.js-dist';
+import * as d3 from "d3";
 
 const answerValues = {
   "Sad": [4, 3, 2, 1],
@@ -12,44 +12,72 @@ const answerValues = {
 };
 
 const BubbleChart = ({ quizResults }) => {
+  const ref = useRef(null);
+  console.log(quizResults);
   useEffect(() => {
     if (quizResults) {
       const data = Object.keys(quizResults).map(emotion => ({
-        x: [emotion], // x-axis: Emotion
-        y: [quizResults[emotion]], // y-axis: Score
-        mode: 'markers',
-        marker: {
-          size: Math.sqrt(quizResults[emotion]) * 10, // Bubble size based on score
-        },
-        text: [emotion],
+        name: emotion,
+        value: quizResults[emotion],
       }));
 
-      const layout = {
-        title: '',
-        showlegend: false, // Hide legend
-        xaxis: {
-          showgrid: false, // Hide x-axis gridlines
-          zeroline: false, // Hide x-axis zeroline
-          showline: false, // Hide x-axis line
-          tickfont: {
-            size: 0, // Hide x-axis tick labels
-          },
-        },
-        yaxis: {
-          showgrid: false, // Hide y-axis gridlines
-          zeroline: false, // Hide y-axis zeroline
-          showline: false, // Hide y-axis line
-          tickfont: {
-            size: 0, // Hide y-axis tick labels
-          },
-        },
-      };
+      const diameter = 600;
+      const color = d3.scaleOrdinal(d3.schemeCategory10);
 
-      Plotly.newPlot('bubble-chart', data, layout);
+      const bubble = d3.pack()
+        .size([diameter, diameter])
+        .padding(1.5);
+
+      const svg = d3.select(ref.current)
+        .append("svg")
+        .attr("width", diameter)
+        .attr("height", diameter)
+        .attr("class", "bubble");
+
+      const nodes = d3.hierarchy({ children: data })
+        .sum(d => d.value);
+
+        const node = svg.selectAll(".node")
+        .data(bubble(nodes).descendants())
+        .enter()
+        .filter(d => !d.children)
+        .append("g")
+        .attr("class", "node")
+        .attr("transform", d => `translate(${d.x},${d.y})`);
+      
+      node.append("circle")
+        .attr("r", d => d.r)
+        .style("fill", d => color(d.data))
+        .on("mouseover", function(d) {
+          d3.select(this).style("fill", "red");
+          const score = quizResults[d.data];
+          d3.select(this.parentNode)
+            .append("text")
+            .attr("class", "bubble-score")
+            .attr("x", 0)
+            .attr("y", 5)
+            .style("text-anchor", "middle")
+            .text(score);
+        })
+        .on("mouseout", function() {
+          d3.select(this).style("fill", d => color(d.data));
+          d3.select(".bubble-score").remove();
+        });
+      
+      node.append("text")
+        .attr("dy", ".3em")
+        .style("text-anchor", "middle")
+        .text(d => `${d.data.name} (${d.value})`) // Displaying both emotion and size
+        .style("fill", "white");
+
+      // Remove the SVG on component unmount
+      return () => {
+        svg.remove();
+      };
     }
   }, [quizResults]);
 
-  return <div id="bubble-chart" />;
+  return <div ref={ref}></div>;
 };
 
 export default function Quiz() {
