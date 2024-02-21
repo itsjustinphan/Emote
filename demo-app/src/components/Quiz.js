@@ -34,43 +34,62 @@ const BubbleChart = ({ quizResults }) => {
         .attr("height", diameter)
         .attr("class", "bubble");
 
+      svg.append("defs")
+        .append("filter")
+        .attr("id", "neon-glow")
+        .attr("x", "-50%")
+        .attr("y", "-50%")
+        .attr("width", "200%")
+        .attr("height", "200%")
+        .html(`
+          <feGaussianBlur in="SourceAlpha" stdDeviation="3" result="blur"></feGaussianBlur>
+          <feComponentTransfer in="blur" result="glow">
+            <feFuncA type="table" tableValues="0 1 1 1 1"></feFuncA>
+          </feComponentTransfer>
+          <feMerge>
+            <feMergeNode in="glow"></feMergeNode>
+            <feMergeNode in="SourceGraphic"></feMergeNode>
+          </feMerge>
+        `);
+
       const nodes = d3.hierarchy({ children: data })
         .sum(d => d.value);
 
-        const node = svg.selectAll(".node")
+      const node = svg.selectAll(".node")
         .data(bubble(nodes).descendants())
         .enter()
         .filter(d => !d.children)
         .append("g")
         .attr("class", "node")
-        .attr("transform", d => `translate(${d.x},${d.y})`);
-      
+        .attr("transform", d => `translate(${d.x},${d.y})`)
+        .on("mouseover", function() {
+          d3.select(this).selectAll("text")
+            .style("fill", "black")
+            .style("font-weight", "bold");
+          d3.select(this).selectAll("circle")
+            .style("fill", "lightyellow")
+            .style("filter", "url(#neon-glow)");
+        })
+        .on("mouseout", function() {
+          d3.select(this).selectAll("text")
+            .style("fill", "white")
+            .style("font-weight", "normal");
+          d3.select(this).selectAll("circle")
+            .style("fill", d => color(d.data))
+            .style("filter", null);
+        });
+
       node.append("circle")
         .attr("r", d => d.r)
         .style("fill", d => color(d.data))
-        .on("mouseover", function(d) {
-          d3.select(this).style("fill", "red");
-          const score = quizResults[d.data];
-          d3.select(this.parentNode)
-            .append("text")
-            .attr("class", "bubble-score")
-            .attr("x", 0)
-            .attr("y", 5)
-            .style("text-anchor", "middle")
-            .text(score);
-        })
-        .on("mouseout", function() {
-          d3.select(this).style("fill", d => color(d.data));
-          d3.select(".bubble-score").remove();
-        });
-      
+        .style("transition", "fill 0.3s ease-in-out");
+
       node.append("text")
         .attr("dy", ".3em")
         .style("text-anchor", "middle")
-        .text(d => `${d.data.name} (${d.value})`) // Displaying both emotion and size
+        .text(d => `${d.data.name} (${d.value})`)
         .style("fill", "white");
 
-      // Remove the SVG on component unmount
       return () => {
         svg.remove();
       };
@@ -101,7 +120,7 @@ export default function Quiz() {
     if (currentQuestion < questions.length - 1 && currentResponse !== null) {
       setResponses(prevResponses => {
         const updatedResponses = [...prevResponses];
-        updatedResponses[nextQuestion] = null; // Reset response for next question
+        updatedResponses[nextQuestion] = null; 
         return updatedResponses;
       });
       setCurrentQuestion(nextQuestion);
@@ -154,7 +173,7 @@ export default function Quiz() {
           </Button>
         </div>
       )}
-      <h4>DISCLAIMER: This quiz is NOT a diagnosis!</h4>
+      <h4 style={{ color: "red" }}>DISCLAIMER: This quiz is NOT a diagnosis!</h4>
     </div>
   );
 }
