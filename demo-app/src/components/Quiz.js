@@ -149,7 +149,7 @@ export default function Quiz() {
               </div>
             ))}
           </form>
-          <Button disabled={responses[currentQuestion] === null} onClick={handleNext}>
+          <Button disabled={responses[currentQuestion] === null} onClick={handleNext} alt="Next Button">
             {currentQuestion < questions.length - 1 ? "Next" : "Finish"}
           </Button>
         </div>
