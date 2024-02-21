@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import Button from 'react-bootstrap/Button';
 import questionsData from "../data/questions.json";
 import * as d3 from "d3";
+// import { useHistory } from "react-router-dom";
 
 const answerValues = {
   "Sad": [4, 3, 2, 1],
@@ -11,8 +12,9 @@ const answerValues = {
   "Stress": [4, 3, 2, 1]
 };
 
-const BubbleChart = ({ quizResults }) => {
+const BubbleChart = ({ quizResults, onBubbleClick }) => {
   const ref = useRef(null);
+  //const history = useHistory();
   console.log(quizResults);
   useEffect(() => {
     if (quizResults) {
@@ -62,6 +64,17 @@ const BubbleChart = ({ quizResults }) => {
         .append("g")
         .attr("class", "node")
         .attr("transform", d => `translate(${d.x},${d.y})`)
+        .on("click", function(d) {
+          // Check if d and d.data are defined before accessing the 'name' property
+          if (d && d.data) {
+            // Call the onBubbleClick function with the emotion name
+            onBubbleClick(d.data.name);
+            // Use useHistory hook to navigate to the corresponding resource page
+            //history.push(`/${d.data.name.toLowerCase()}`); // Assuming your route paths are based on emotion names
+          } else {
+            console.error("Data or data.name is undefined:", d);
+          }
+        })
         .on("mouseover", function() {
           d3.select(this).selectAll("text")
             .style("fill", "black")
@@ -90,12 +103,11 @@ const BubbleChart = ({ quizResults }) => {
         .text(d => `${d.data.name} (${d.value})`)
         .style("fill", "white");
 
-      return () => {
-        svg.remove();
-      };
-    }
-  }, [quizResults]);
-
+        return () => {
+          svg.remove();
+        };
+      }
+    }, [quizResults]); // Include history in the dependency array
   return <div ref={ref}></div>;
 };
 
@@ -112,7 +124,28 @@ export default function Quiz() {
       return updatedResponses;
     });
   };
-
+  const handleBubbleClick = (emotion) => {
+    // Navigate to the corresponding resource page based on the emotion
+    switch (emotion) {
+      case "Sad":
+        //history.push("/sad");
+        break;
+      case "Happy":
+        //history.push("/happy");
+        break;
+      case "Anger":
+        //history.push("/anger");
+        break;
+      case "Fear":
+        //history.push("/fear");
+        break;
+      case "Stress":
+        //history.push("/stress");
+        break;
+      default:
+        break;
+    }
+  };
   const handleNext = () => {
     const currentResponse = responses[currentQuestion];
     const nextQuestion = currentQuestion + 1;
@@ -155,7 +188,7 @@ export default function Quiz() {
 
       {quizResults ? (
         <div>
-          <BubbleChart quizResults={quizResults} />
+          <BubbleChart quizResults={quizResults} onBubbleClick={handleBubbleClick} />
         </div>
       ) : (
         <div>
