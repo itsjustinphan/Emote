@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import Button from 'react-bootstrap/Button';
 import questionsData from "../data/questions.json";
 import * as d3 from "d3";
-// import { useHistory } from "react-router-dom";
+import{ useNavigate }from 'react-router-dom';
 
 const answerValues = {
   "Sad": [4, 3, 2, 1],
@@ -11,6 +11,20 @@ const answerValues = {
   "Fear": [4, 3, 2, 1],
   "Stress": [4, 3, 2, 1]
 };
+
+function BubbleStuff() {
+  const navigate = useNavigate();
+
+  const handleButtonClick = () => {
+    navigate('/Happy');
+  };
+
+  return (
+    <div>
+      <button onClick={handleButtonClick}>Go to Home Page</button>
+    </div>
+  );
+}
 
 const BubbleChart = ({ quizResults, onBubbleClick }) => {
   const ref = useRef(null);
@@ -124,6 +138,8 @@ export default function Quiz() {
       return updatedResponses;
     });
   };
+
+  
   const handleBubbleClick = (emotion) => {
     // Navigate to the corresponding resource page based on the emotion
     switch (emotion) {
@@ -162,6 +178,9 @@ export default function Quiz() {
     }
   };
 
+
+
+
   const displayQuizResults = () => {
     const results = {};
     for (const emotion in answerValues) {
@@ -179,6 +198,9 @@ export default function Quiz() {
     }
     setQuizResults(results);
   };
+
+
+
 
   return (
     <div className="full-height">
@@ -210,3 +232,5 @@ export default function Quiz() {
     </div>
   );
 }
+
+
