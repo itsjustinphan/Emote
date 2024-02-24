@@ -27,6 +27,7 @@ function BubbleStuff() {
 }
 
 const BubbleChart = ({ quizResults, onBubbleClick }) => {
+  const nav = useNavigate();
   const ref = useRef(null);
   //const history = useHistory();
   console.log(quizResults);
@@ -78,11 +79,12 @@ const BubbleChart = ({ quizResults, onBubbleClick }) => {
         .append("g")
         .attr("class", "node")
         .attr("transform", d => `translate(${d.x},${d.y})`)
-        .on("click", function(d) {
+        .on("click", (d) => {
           // Check if d and d.data are defined before accessing the 'name' property
-          if (d && d.data) {
+          console.log(d)
+          if (d) {
             // Call the onBubbleClick function with the emotion name
-            onBubbleClick(d.data.name);
+            nav("/" + d.target.__data__.data.name);
             // Use useHistory hook to navigate to the corresponding resource page
             //history.push(`/${d.data.name.toLowerCase()}`); // Assuming your route paths are based on emotion names
           } else {
@@ -142,25 +144,25 @@ export default function Quiz() {
   
   const handleBubbleClick = (emotion) => {
     // Navigate to the corresponding resource page based on the emotion
-    switch (emotion) {
-      case "Sad":
-        //history.push("/sad");
-        break;
-      case "Happy":
-        //history.push("/happy");
-        break;
-      case "Anger":
-        //history.push("/anger");
-        break;
-      case "Fear":
-        //history.push("/fear");
-        break;
-      case "Stress":
-        //history.push("/stress");
-        break;
-      default:
-        break;
-    }
+    // switch (emotion) {
+    //   case "Sad":
+    //     navigate.push("/sad");
+    //     break;
+    //   case "Happy":
+    //     navigate.push("/happy");
+    //     break;
+    //   case "Anger":
+    //     navigate.push("/anger");
+    //     break;
+    //   case "Fear":
+    //     navigate.push("/fear");
+    //     break;
+    //   case "Stress":
+    //     navigate.push("/stress");
+    //     break;
+    //   default:
+    //     break;
+    // }
   };
   const handleNext = () => {
     const currentResponse = responses[currentQuestion];
@@ -210,7 +212,7 @@ export default function Quiz() {
 
       {quizResults ? (
         <div>
-          <BubbleChart quizResults={quizResults} onBubbleClick={handleBubbleClick} />
+          <BubbleChart quizResults={quizResults} onBubbleClick={() => handleBubbleClick()} />
         </div>
       ) : (
         <div>
