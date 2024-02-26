@@ -1,0 +1,29 @@
+# **Emote Project Readme**
+
+## **Project Overview**
+
+Welcome to Emote, an innovative project designed to address and enhance the mental well-being of students. Rooted in the principles of the United Nations Sustainable Development Goal 3: Good Health and Well-Being, Emote seeks to revolutionize the way students evaluate and enhance their mental health across diverse dimensions. Our mission is to provide personalized resources and services, tailoring support to the unique needs of individuals and fostering a culture of overall well-being.
+
+### **UN SDG Alignment - Goal 3: Good Health and Well-Being**
+
+Goal 3, a cornerstone of the UN SDGs, is dedicated to ensuring healthy lives and promoting well-being for all at every stage of life. In a world grappling with inequalities in healthcare access, particularly intesified by post-COVID-19 and ongoing crises, the Sustainable Development Goals pledge to reduce these disparities. Emote contributes to this commitment by addressing epidemics and championing universal health coverage, striving to ensure that everyone can access quality health services without enduring financial hardship.
+
+### **The Significance of Goal 3**
+
+"Healthy people are the foundation for healthy economies" (SDG). This powerful statement emphasizes the critical role of prioritizing health, including mental health, in shaping the well-being of individuals and, by extension, the health of the community as a whole. Emote places a spotlight on mental health, recognizing it as a vital component of a holistic and thriving society.
+
+### **Equitable Access to Healthcare**
+
+The Emote team acknowledges the profound importance of equitable access to healthcare, particularly in the context of mental health. Disparities often emerge due to socioeconomic and geographic factors. Emote's web application is poised to bridge this gap by providing University of Washington students with accessible mental health guidance, irrespective of their background, ensuring that no one is left behind in their pursuit of well-being.
+
+### **College Mental Health Statistics**
+
+In light of alarming statistics, it's evident that a significant portion of college students grapple with mental health challenges. The 2023 survey reveals that 44 percent of students reported symptoms of depression, 37 percent experienced anxiety, and 15 percent contemplated suicide—the highest rate in the 15-year history of the survey (Flannery, 2023).
+
+### **The Emote Solution**
+
+Emote presents a pioneering solution by introducing a comprehensive mental health check within a user-friendly web application tailored for University of Washington students. This innovative tool empowers students to introspectively assess their current emotional state through a thoughtfully crafted quiz. Based on the quiz results and the emotions identified, the web application then provides tailored suggestions for resources, guidelines, and activities aimed at boosting morale and addressing any mental health concerns. **DISCLAIMER: THIS QUIZ IS NOT A MENTAL DIAGNOSIS!**
+
+
+
+Thank you for exploring Emote, where we strive to contribute to the well-being of students and promote a healthier community.
