@@ -1,20 +1,41 @@
 /* CSS for NavBar */
 
-/* Red color for nav bar */
-.nav {
-    background-color: purple;
+.color-nav {
+    background-color: #f9f5dc;
+    font-family: 'Plus Jakarta Sans';
+  }
+
+  .color-nav a {
+    color: #4B0082;
+    font-size: 25px; 
 }
-  
-/* button and font color for dropdown */
-#dropdown-button {
-    background-color: black;
-    color: white;
-    width: fit-content;
+
+nav .navbar-brand {
+    background: black; 
+    -webkit-background-clip: text; 
+    background-clip: text; 
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    font-size: 50px;
 }
-  
-/* allows the text to respond when user hovers over it */
-.active {
+
+.navbar-nav .nav-link:hover {
     text-decoration: underline;
+}
+  
+#dropdown-button {
+    background: linear-gradient(to right, #ffcccc, #ccccff);
+    color: #333333; 
+    width: fit-content;
+    border: none; 
+    padding: 10px 20px; 
+    font-size: 25px; 
+    border-radius: 5px; 
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+#dropdown-button:hover {
+    background: linear-gradient(to right, #ccccff, #ffcccc); 
 }
   
 /* handles styling for when the dropdown menu is clicked */

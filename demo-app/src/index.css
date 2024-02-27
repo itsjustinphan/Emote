@@ -273,11 +273,6 @@ collapse navbar-collapse {
   color: black;
 }
 
-.color-nav {
-  background-color: #F0EEB7;
-  font-family: 'Plus Jakarta Sans';
-}
-
 /* Extra small devices */
 @media (max-width: 600px){
   header {

@@ -18,22 +18,18 @@ export default function NavBar() {
   return (
     <>
     <div>
-      {/* <Navbar bg="light" variant="light" expand="md" aria-label="NavBar"> */}
       <Navbar className="color-nav" aria-label="NavBar">
-        {/* <Container> */}
-          <Navbar.Brand>Emote.</Navbar.Brand>
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-          <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="ml-auto">
-              <Nav.Link as={Link} aria-label="Home Page" to="">Home</Nav.Link>
-              <Nav.Link as={Link} aria-label="About" to="/About">About</Nav.Link>
-              <Nav.Link as={Link} aria-label="Quiz" to="/Quiz">Quiz</Nav.Link>
-              {/* <Nav.Link as={Link} aria-label="Resources" to="/Resources">Resources</Nav.Link> */}
-
-              <Dropdown>
-              
+        <Container>
+          <Nav className="mr-auto">
+            <Nav.Link as={Link} to="">Home</Nav.Link>
+            <Nav.Link as={Link} to="/About">About</Nav.Link>
+          </Nav>
+          <Navbar.Brand className="mx-auto">Emote.</Navbar.Brand>
+          <Nav>
+            <Nav.Link as={Link} to="/Quiz">Quiz</Nav.Link>
+            <Dropdown>
               <Dropdown.Toggle aria-label="Emotions" className="dropdown" id="dropdown-button">
-                <div className="dropdown-name">Resources for Each Emotion</div>
+                <div className="dropdown-name">Resources</div>
               </Dropdown.Toggle>
               <Dropdown.Menu className="dropdown">
                 <Dropdown.Item>
@@ -68,14 +64,10 @@ export default function NavBar() {
                 </Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
-
-
-              
-            </Nav>
-          </Navbar.Collapse>
-        {/* </Container> */}
+          </Nav>
+        </Container>
       </Navbar>
-      </div>
-    </>
-  );
+    </div>
+  </>
+);
 }
