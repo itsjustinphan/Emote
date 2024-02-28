@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import Button from 'react-bootstrap/Button';
 import questionsData from "../data/questions.json";
-import * as d3 from "d3";
+import * as d3 from 'd3';
 import{ useNavigate }from 'react-router-dom';
 
 const answerValues = {
@@ -29,7 +29,8 @@ function BubbleStuff() {
 const BubbleChart = ({ quizResults, onBubbleClick }) => {
   const nav = useNavigate();
   const ref = useRef(null);
-  //const history = useHistory();
+
+// Key Feature #1: Quiz Results Array
   console.log(quizResults);
   useEffect(() => {
     if (quizResults) {
@@ -80,7 +81,8 @@ const BubbleChart = ({ quizResults, onBubbleClick }) => {
         .attr("class", "node")
         .attr("transform", d => `translate(${d.x},${d.y})`)
         .on("click", (d) => {
-          // Check if d and d.data are defined before accessing the 'name' property
+          
+// Key Feature #2: Check if d and d.data are defined before accessing the 'name' property
           console.log(d)
           if (d) {
             // Call the onBubbleClick function with the emotion name
@@ -88,6 +90,8 @@ const BubbleChart = ({ quizResults, onBubbleClick }) => {
             // Use useHistory hook to navigate to the corresponding resource page
             //history.push(`/${d.data.name.toLowerCase()}`); // Assuming your route paths are based on emotion names
           } else {
+
+// Key Feature #2.1: If they aren't defined, then tell the console.
             console.error("Data or data.name is undefined:", d);
           }
         })
@@ -143,26 +147,6 @@ export default function Quiz() {
 
   
   const handleBubbleClick = (emotion) => {
-    // Navigate to the corresponding resource page based on the emotion
-    // switch (emotion) {
-    //   case "Sad":
-    //     navigate.push("/sad");
-    //     break;
-    //   case "Happy":
-    //     navigate.push("/happy");
-    //     break;
-    //   case "Anger":
-    //     navigate.push("/anger");
-    //     break;
-    //   case "Fear":
-    //     navigate.push("/fear");
-    //     break;
-    //   case "Stress":
-    //     navigate.push("/stress");
-    //     break;
-    //   default:
-    //     break;
-    // }
   };
   const handleNext = () => {
     const currentResponse = responses[currentQuestion];
@@ -198,6 +182,8 @@ export default function Quiz() {
       });
       results[emotion] = score;
     }
+// Key Feature #3: Ensures quiz results are correct before setting the state. 
+    console.log(results);
     setQuizResults(results);
   };
 
