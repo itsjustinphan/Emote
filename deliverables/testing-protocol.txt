@@ -1,0 +1,28 @@
+For all of our key features, we used manual testing such as utilizing 
+Console.log() to check if the outputs match what we are expecting.
+
+**Key Feature #1: Quiz Results Array**
+- We tested our quiz results by using Console.log() to check if the 
+output matches the actual result of the quiz, and that the bubble sizes
+of our chart are proportional to the results of the quiz.
+- The expected output should be an accurate bubble chart that shows the
+results of the quiz accurately and appropriately.
+- There were no workarounds done as there were no bugs.
+
+**Key Feature #2: Ensuring the bubbles route to the correct path**
+- We tested our paths by using Console.log() to check if d and 
+d.data are defined before accessing the 'name' property. What this means
+is that it is ensuring that the bubbles are routed to the correct path.
+- The expected result would be if the bubble's data is properly defined 
+and contains a name property (emotion), the browser would navigate to a 
+new URL path that matches the name property (emotion) of the clicked 
+bubble. If d or d.data is not defined, it logs an error to the 
+console indicating that the data or its name property is undefined.
+- There were no workarounds done as there were no bugs.
+
+**Key Feature #3: Ensuring quiz results are correct before setting the state**
+- We tested our quiz results by using Console.log() to check if the quiz
+results are correct before setting the state.
+- The expected output would be the correct and accurate results from the
+quiz, before the state is set.
+- There were no workarounds done as there were no bugs.
