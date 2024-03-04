@@ -1,86 +1,86 @@
 /* CSS for NavBar */
 
 .color-nav {
-    background-color: #f9f5dc;
-    font-family: 'Plus Jakarta Sans';
-  }
+  background-color: #f9f5dc; /* Background color */
+  font-family: 'Plus Jakarta Sans';
+}
 
-  .color-nav a {
-    color: #4B0082;
-    font-size: 25px; 
+.color-nav a {
+  color: #4B0082; /* Link color */
+  font-size: 25px; 
 }
 
 nav .navbar-brand {
-    background: black; 
-    -webkit-background-clip: text; 
-    background-clip: text; 
-    -webkit-text-fill-color: transparent;
-    font-weight: bold;
-    font-size: 50px;
+  background: black; /* Navbar brand background color */
+  -webkit-background-clip: text; 
+  background-clip: text; 
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  font-size: 50px;
 }
 
 .navbar-nav .nav-link:hover {
-    text-decoration: underline;
+  text-decoration: underline; /* Link hover effect */
 }
-  
+
 #dropdown-button {
-    background: linear-gradient(to right, #ffcccc, #ccccff);
-    color: #333333; 
-    width: fit-content;
-    border: none; 
-    padding: 10px 20px; 
-    font-size: 25px; 
-    border-radius: 5px; 
-    transition: background-color 0.3s, color 0.3s; 
+  background: linear-gradient(to right, #ffcccc, #ccccff); /* Button gradient background */
+  color: #333333; /* Button text color */
+  width: fit-content;
+  border: none; 
+  padding: 10px 20px; 
+  font-size: 25px; 
+  border-radius: 5px; 
+  transition: background-color 0.3s, color 0.3s; 
 }
 
 #dropdown-button:hover {
-    background: linear-gradient(to right, #ccccff, #ffcccc); 
+  background: linear-gradient(to right, #ccccff, #ffcccc); /* Button gradient hover background */
 }
-  
+
 /* handles styling for when the dropdown menu is clicked */
 .dropdown {
-    width: auto;
+  width: auto;
 }
-  
+
 .dropdown-name{
-    display: none;
+  display: none;
 }
-  
+
 .dropdown-image{
-    display: none;
-    width:  70px;
-    height: 70px;
+  display: none;
+  width:  70px;
+  height: 70px;
 }
-  
+
 .dropdown-text {
-    float: left;
-    vertical-align: middle;
+  float: left;
+  vertical-align: middle;
 }
-  
+
 /* handles sizing of the dropdown as the page shrinks and expands */
 @media (min-width:480px) {
-  
-  
+
+
 }
-  
+
 @media (min-width:768px) {
-    .dropdown {
-        width: 200px;
-    }
-    
-    .dropdown-name{
-      display:inline;
-    }
+  .dropdown {
+      width: 200px;
+  }
   
-    .dropdown-image {
-      display: inline;
-      width: 3rem;
-    }
-  
-    .dropdown-text {
-      float: right;
-      vertical-align: middle;
-    }
-  
+  .dropdown-name{
+    display:inline;
+  }
+
+  .dropdown-image {
+    display: inline;
+    width: 3rem;
+  }
+
+  .dropdown-text {
+    float: right;
+    vertical-align: middle;
+  }
+
 }

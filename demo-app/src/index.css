@@ -31,6 +31,16 @@ h2 {
   font-family: 'Plus Jakarta Sans';
   font-weight: 600;
 }
+.about-page {
+  padding-left: 10px;
+  padding-right: 10px;
+  max-width: 90%;
+  margin: 0 auto;
+}
+.about-page p {
+  text-align: justify;
+}
+
 
 .about-page > h2 {
   text-align: left;
@@ -64,10 +74,6 @@ a {
 
 /* Home page landing section */
 .landing-headings {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   text-align: center;
   color: black;
 }
@@ -222,48 +228,72 @@ a:link {
   width: 50%;
   padding: 30px;
 }
+.full-height h4.quiz-disclaimer {
+  margin: 0;
+  padding: 30px 0;
+}
+/* Footer section */
 
 /* Footer section */
 
 footer {
-  display: flex; 
-  position: relative;
-  bottom: 0;
   width: 100%;
-  height: 11rem;
-  background-color: #F0EEB7; 
- }
+  background: #362073;
+  padding: 0 20px;
+}
+.footer-slogan img {
+  margin-right: 10px;
+  max-width: 120px;
+}
+ .full-height h4 {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
 
- .full-height {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
- }
-
-footer > div > img {
-  width: 100px;
-  height: 100px;
+.footer-contact a {
+  position: relative;
+  padding-left: 30px;
+  text-decoration: none;
+  max-width: 214px;
+  margin: 0 auto 10px;
+  color: #fff;
+}
+.footer-contact a span {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.footer-contact p {
+  color: #fff;
 }
 
 .footer-slogan {
   display: flex;
   align-items: center;
   margin-right: 5rem;
+  margin-right: 17px;
 }
-
+.footer-slogan img {
+  margin-right: 10px;
+}
 .footer-slogan h2 {
   text-align: left;
   margin-bottom: 0;
   padding-bottom: 0;
+  color: #fff;
 }
 
 .footer-slogan p {
   font-style: italic;
+  color: #fff;
+}
+.footer-contact h3 {
+  color: #fff;
 }
 
 /* Navbar collapse */
+
 collapse navbar-collapse {
   padding: 25px 25px 25px 25px;
 }
@@ -273,6 +303,15 @@ collapse navbar-collapse {
   color: black;
 }
 
+.color-nav {
+  background: #F0EEB7; /* Honey yellow background */
+  font-family: 'Plus Jakarta Sans';
+}
+
+#dropdown-button {
+  background-color: transparent !important;
+  border: none;
+}
 /* Extra small devices */
 @media (max-width: 600px){
   header {
@@ -347,4 +386,375 @@ collapse navbar-collapse {
   .about-us {
     text-align: left;
   }
+}
+
+
+
+/*Quiz Section CSS*/
+
+.full-height.quiz-bg header, .card-bg header {
+  background-color: transparent;
+  margin: 0;
+  padding: 28px 0;
+}
+.full-height.quiz-bg header, .card-bg header, .anger-bg header, .stress-bg header, .faer-bg header, .happy-bg header, .sad-bg header  {
+  background-color: transparent;
+  margin: 0;
+  padding: 10px 0;
+  color: #362073;
+}
+.quiz-bg {
+  background-color: #fff;
+  background-size: cover;
+  width: 100%;
+  min-height: 100vh;
+}
+.node circle {
+fill: #70B840 !important;
+}
+.node:nth-child(2) circle {
+fill: #26A6E1 !important;
+}
+.node:nth-child(3) circle {
+fill: #DBD752 !important;
+}
+.node:nth-child(4) circle {
+fill: #B6240A !important;
+}
+.node:nth-child(5) circle {
+fill: #B981DD !important;
+}
+
+.contant-div {
+/* background-image: url(./img/sadness.png);
+background-size: contain;
+background-position: right; */
+max-width: 80%;
+margin: 0 auto;
+background-repeat: no-repeat;
+}
+.contant-div > h2 {
+color: #362073;
+}
+h1.quiz-title {
+font-size: 50px;
+font-weight: bold;
+color: #362073;
+}
+.contant-div form > div {
+margin-bottom: 15px;
+position: relative;
+}
+.contant-div p {
+font-size: 20px;
+font-weight: 500;
+padding: 33px 20px 33px 32px;
+margin-bottom: 35px;
+border-radius: 12px;
+color: #362073;
+border: 2px solid #362073;
+position: relative;
+}
+.contant-div p::before {
+position: absolute;
+top: -2px;
+left: -2px;
+background: #362073;
+content: " ";
+width: 13px;
+height: 102%;
+border-radius: 12px;
+}
+.radio-button input[type="radio"] {
+accent-color: #362073;
+position: absolute;
+top: 12px;
+left: 15px;
+}
+.radio-button label {
+  padding: 6px 20px 6px 36px;
+  border-radius: 10px;
+  color: #362073;
+  transition: all .3s;
+}
+.radio-button label:hover {
+  background-color: #F9F5DC;
+}
+.radio-button input[type="radio"]:checked+label {
+  background-color: #F9F5DC;
+padding: 6px 20px 6px 36px;
+}
+.contant-div form {
+margin-left: 30px;
+}
+.contant-div form > label {
+margin-left: 8px !important;
+}
+button.nextBtn.btn.btn-primary {
+margin-top: 20px;
+margin-left: 30px;
+padding: 10px 20px;
+transition: all .3s;
+background-color: #fff;
+border: 1px solid #362073;
+text-transform: capitalize;
+color: #362073;
+font-weight: 500;
+}
+button.nextBtn.btn.btn-primary:hover {
+box-shadow: 0 2px 3px #362073;
+background-color: #362073;
+color: #fff;
+}
+.full-height h4.quiz-disclaimer {
+margin: 0;
+padding: 30px 0;
+}
+
+/* Dropdown styling */
+nav.color-nav.navbar.navbar-expand.navbar-light {
+  padding: 0;
+}
+.dropdown-item {
+  margin: 6px 0;
+  transition: all .3s;
+}
+.dropdown-item:focus {
+  box-shadow: 0 0px 5px #818181;
+}
+.navbar-expand .navbar-nav .nav-link {
+  color: dark purple;
+  display: flex;
+  align-items: center;
+  padding: 0 20px !important;
+  transition: all .3s;
+}
+.dropdown-menu >.nav-link {
+  padding: 0 !important;
+}
+.navbar-expand .navbar-nav .dropdown-menu {
+  margin-left: 50px;
+}
+.nav-link img.dropdown-image {
+  margin: 0 10px;
+}
+.nav-link p.dropdown-text {
+  margin: 0 10px;
+  color: #fff;
+}
+.dropdown .anger, .dropdown .anger:hover, .dropdown-item:active {
+  background-color: #B6240A;
+}
+.dropdown .stress, .dropdown .stress:hover, .dropdown-item:active {
+  background-color: #70B840;
+}
+.dropdown .fear, .dropdown .fear:hover, .dropdown-item:active {
+  background-color: #B981DD;
+}
+.dropdown .happy, .dropdown .happy:hover, .dropdown-item:active {
+  background-color: #DBD752;
+}
+.dropdown .sadness, .dropdown .sadness:hover, .dropdown-item:active {
+  background-color: #25A6E1;
+}
+.dropdown-item:hover {
+  box-shadow: 0 2px 3px #818181;
+}
+
+/* Begin Resource Card styling */
+
+.resource-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  max-width: 900px;
+  margin: auto;
+ }
+
+ .resource-card-container {
+  display: flex;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin-bottom: 20px;
+  justify-content: space-evenly;
+  margin: 20px auto;
+  border: 4px solid #362073;
+  transition: all .3s;
+}
+.resource-card-container:hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.resource-card {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Plus Jakarta Sans';
+}
+
+.resource-card h3 {
+  margin-top: 0;
+  color: #362073;
+}
+.resource-card img {
+  max-width: 100%;
+  height: 240px;
+  margin-top: 10px;
+}
+
+.resource-card a {
+  margin: 21px auto 0 auto;
+  text-decoration: none;
+  color: #362073;
+  text-align: center;
+  border: 1px solid #362073;
+  max-width: 128px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  display: block;
+  transition: all .3s;
+}
+
+.resource-card a:hover {
+  text-decoration: none;
+  color: #fff;
+  background-color: #362073;
+}
+
+@media (max-width: 600px) {
+  .resource-card-container {
+    max-width: 100%;
+  }
+}
+
+/* End of Resource Card styling */
+
+
+
+
+
+
+/* Extra Small Devices, Phones */
+@media (min-width: 480px) and (max-width: 767px) {
+  nav .navbar-brand {
+    font-size: 30px;
+}
+
+.navbar-expand .navbar-nav .nav-link {
+  padding: 0 6px !important;
+  font-size: 13px;
+}
+  .contant-div form {
+    margin-left: 10px;
+  }
+  .contant-div {
+  max-width: 90%;
+  }
+  .contant-div form label {
+  display: inline;
+  }
+  button.nextBtn.btn.btn-primary {
+  margin-left: 12px;
+  }
+  .navbar-expand .navbar-nav .dropdown-menu {
+    margin-left: -173px;
+  }
+  .dropdown-item >.nav-link {
+  padding: 0 0 !important;
+  }
+  .dropdown-menu.show {
+    display: block;
+  }
+  .dropdown-image {
+  display: block !important;
+  max-width: 50px;
+  max-height: fit-content;
+  }
+  .resource-container {
+    padding: 0 20px;
+  }
+  footer {
+    height: auto;
+    padding: 20px 20px;
+  }
+  .footer-contact {
+    margin-top: 20px;
+  }
+}
+
+/* Extra Small Devices, Phones */
+@media (min-width: 320px) and (max-width: 767px) {
+  nav .navbar-brand {
+    font-size: 20px !important;
+}
+  .navbar-expand .navbar-nav .nav-link {
+    padding: 0 6px !important;
+    font-size: 13px;
+  }
+  .navbar-expand .navbar-nav .dropdown-menu {
+    margin-left: -102px;
+  }
+  #dropdown-button {
+    border: 1px solid #fff;
+    margin-left: 10px;
+}
+  .landing-headings > h1 {
+    font-size: 3rem;
+  }
+  .landing-headings > h3 {
+    font-size: 1.2rem;
+  }
+  .Home-image {
+    width: 300px;
+    height: 300px;
+  }
+  h1.quiz-title {
+    font-size: 40px;
+}
+  .contant-div form {
+    margin-left: 10px;
+  }
+  .contant-div {
+  max-width: 95%;
+  }
+  .contant-div p {
+    font-size: 15px;
+  }
+  .contant-div form label {
+    font-size: 14px;
+  }
+  .contant-div form input {
+    height: 10px;
+    width: 10px;
+  }
+  .contant-div form label {
+  display: inline;
+  }
+  .radio-button input[type="radio"] {
+    top: 8px;
+    left: 15px;
+}
+.contant-div p {
+  padding: 15px 20px 15px 32px;
+}
+  .full-height h4 {
+    font-size: 18px;
+  }
+  button.nextBtn.btn.btn-primary {
+  margin-left: 12px;
+  padding: 4px 16px;
+  }
+  .resource-container {
+    padding: 0 10px;
+  }
+  footer {
+    height: auto;
+    padding: 20px 20px;
+  }
+  .footer-contact {
+    margin-top: 20px;
+  }
+
 }

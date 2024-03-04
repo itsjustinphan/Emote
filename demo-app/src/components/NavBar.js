@@ -32,31 +32,31 @@ export default function NavBar() {
                 <div className="dropdown-name">Resources</div>
               </Dropdown.Toggle>
               <Dropdown.Menu className="dropdown">
-                <Dropdown.Item>
+                <Dropdown.Item className="anger">
                   <NavLink aria-label="Anger" to="/Anger" className="nav-link" id="nav-li" activeClassName={"activeLink"}>
                     <img className="dropdown-image" src={anger} alt="anger" />
                     <p className="dropdown-text">Anger</p>
                   </NavLink>
                 </Dropdown.Item>
-                <Dropdown.Item>
+                <Dropdown.Item className="stress">
                   <NavLink aria-label="Stress" to="/Stress" className="nav-link" id="nav-li" activeClassName={"activeLink"}>
                     <img className="dropdown-image" src={stress} alt="stress" />
                     <p className="dropdown-text">Stress</p>
                   </NavLink>
                 </Dropdown.Item>
-                <Dropdown.Item>
+                <Dropdown.Item className="fear">
                   <NavLink aria-label="Fear" to="/Fear" className="nav-link" id="nav-li" activeClassName={"activeLink"}>
                     <img className="dropdown-image" src={fear} alt="fear" />
                     <p className="dropdown-text">Fear</p>
                   </NavLink>
                 </Dropdown.Item>
-                <Dropdown.Item>
+                <Dropdown.Item className="happy">
                   <NavLink aria-label="Happy" to="/Happy" className="nav-link" id="nav-li" activeClassName={"activeLink"}>
                     <img className="dropdown-image" src={happy} alt="happy" />
                     <p className="dropdown-text">Happy</p>
                   </NavLink>
                 </Dropdown.Item>
-                <Dropdown.Item>
+                <Dropdown.Item className="sadness">
                   <NavLink aria-label="Sadness" to="/Sad" className="nav-link" id="nav-li" activeClassName={"activeLink"}>
                     <img className="dropdown-image" src={sadness} alt="sadness" />
                     <p className="dropdown-text">Sad</p>

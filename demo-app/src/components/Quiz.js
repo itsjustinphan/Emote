@@ -191,9 +191,9 @@ export default function Quiz() {
 
 
   return (
-    <div className="full-height">
+    <div className="full-height quiz-bg">
       <header>
-        <h1>{quizResults ? "Quiz Results" : "Quiz"}</h1>
+        <h1 className="quiz-title">{quizResults ? "Quiz Results" : "Quiz"}</h1>
       </header>
 
       {quizResults ? (
@@ -201,9 +201,10 @@ export default function Quiz() {
           <BubbleChart quizResults={quizResults} onBubbleClick={() => handleBubbleClick()} />
         </div>
       ) : (
-        <div>
-          <p>Question {currentQuestion + 1}/{questions.length}: {questions[currentQuestion].question}</p>
-          <form>
+        <div className="contant-div">
+          <h2>Question {currentQuestion + 1}/{questions.length}</h2>
+          <p>{questions[currentQuestion].question}</p>
+          <form className="radio-button">
             {questions[currentQuestion].options.map((option, index) => (
               <div key={index}>
                 <input type="radio" id={`option_${index}`} name={`question_${currentQuestion}`} value={index} defaultChecked={false} onChange={() => handleResponseChange(index)} />
@@ -211,12 +212,12 @@ export default function Quiz() {
               </div>
             ))}
           </form>
-          <Button disabled={responses[currentQuestion] === null} onClick={handleNext} alt="Next Button">
+          <Button className="nextBtn" disabled={responses[currentQuestion] === null} onClick={handleNext} alt="Next Button">
             {currentQuestion < questions.length - 1 ? "Next" : "Finish"}
           </Button>
         </div>
       )}
-      <h4 style={{ color: "red" }}>DISCLAIMER: This quiz is NOT a diagnosis!</h4>
+      <h4 className="quiz-disclaimer" style={{ color: "red" }}>DISCLAIMER: This quiz is NOT a diagnosis!</h4>
     </div>
   );
 }
