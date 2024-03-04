@@ -561,6 +561,12 @@ nav.color-nav.navbar.navbar-expand.navbar-light {
   box-shadow: 0 2px 3px #818181;
 }
 
+.quiz-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
 /* Begin Resource Card styling */
 
 .resource-container {

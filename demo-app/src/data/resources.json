@@ -35,7 +35,7 @@
         "resource_name": "Anger Management Workbook",
         "description": "Anger management workbook to write out all of your feelings with guided prompts.",
         "emotion": "Anger",
-        "img": "./img/anger-workbook.jpg",
+        "img": "./img/anger-workbook.png",
         "website_link": "https://store.samhsa.gov/sites/default/files/anger_management_workbook_508_compliant.pdf"
     },
 
@@ -60,7 +60,9 @@
         "description": "Youtube video with a 10-minute meditation if you are feeling angry.",
         "emotion": "Anger",
         "img": "./img/10-meditation.png",
-        "website_link": "https://www.youtube.com/watch?v=wkse4PPxkk4"
+        "website_link": "https://www.youtube.com/watch?v=wkse4PPxkk4",
+        "type": "video",
+        "video_link": "https://youtu.be/wkse4PPxkk4?si=MhzL-zCbv86JmB_i"
     },
     
     {
@@ -131,7 +133,7 @@
         "resource_name": "UW CATS (Center for Anxiety and Trauma Stress)",
         "description": "UW center that conducts research to better understand treatment of stress and anxiety and provide a state-of-the-art clinical care for those suffering from these emotions",
         "emotion": "Stress",
-        "img": "./img/uw-cats.jpg",
+        "img": "./img/uw-cats.png",
         "website_link": "https://www.washington.edu/research/research-centers/center-for-anxiety-and-trauma-stress-uwcats/"
     },
 

@@ -198,7 +198,7 @@ export default function Quiz() {
       </header>
 
       {quizResults ? (
-        <div>
+        <div className="quiz-container">
           <BubbleChart quizResults={quizResults} onBubbleClick={() => handleBubbleClick()} />
         </div>
       ) : (
